@@ -13,6 +13,7 @@
         "test-cra",
         "react-native-vanilla",
         "vue-example",
+        "angular-test",
         "@storybook/components",
         "@storybook/vue"
       ]
