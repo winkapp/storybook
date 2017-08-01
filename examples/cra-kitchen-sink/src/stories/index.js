@@ -25,7 +25,8 @@ import { Button, Welcome } from '@storybook/react/demo';
 import App from '../App';
 import Logger from './Logger';
 import Container from './Container';
-import TypedButton from '../TypedButton';
+import TypedButton from '../components/TypedButton';
+import DocgenButton from '../components/DocgenButton';
 
 const EVENTS = {
   TEST_EVENT_1: 'test-event-1',
@@ -146,14 +147,13 @@ storiesOf('Button', module)
     )
   );
 
-storiesOf('TypedButton', module)
-	.addWithInfo('TypedButton',
-        'Some Description',
-        () => <TypedButton
-			onClick={action('clicked')}
-			label="Typed Button"
-		/>,
-	)
+storiesOf('AddonInfo.TypedButton', module).addWithInfo('TypedButton', 'Some Description', () =>
+  <TypedButton onClick={action('clicked')} label="Typed Button" />
+);
+
+storiesOf('AddonInfo.DocgenButton', module).addWithInfo('DocgenButton', 'Some Description', () =>
+  <DocgenButton onClick={action('clicked')} label="Docgen Button" />
+);
 
 storiesOf('App', module).add('full app', () => <App />);
 
