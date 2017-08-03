@@ -6,7 +6,6 @@ import {
   TouchableWithoutFeedback,
   Image,
   Text,
-  StatusBar,
 } from 'react-native';
 import style from './style';
 import StoryListView from '../StoryListView';
@@ -107,7 +106,6 @@ export default class OnDeviceUI extends Component {
 
     return (
       <View style={style.main}>
-        <StatusBar hidden />
         <Animated.View style={menuSpacerStyles} />
         <View style={style.previewContainer}>
           <Animated.View style={headerStyles}>
